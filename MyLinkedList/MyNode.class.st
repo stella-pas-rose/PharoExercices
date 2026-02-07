@@ -1,15 +1,10 @@
 Class {
-	#name : 'MyLinkedList',
+	#name : 'MyNode',
 	#superclass : 'Object',
 	#instVars : [
-		'first'
+		'value',
+		'next'
 	],
 	#category : 'MyLinkedList',
 	#package : 'MyLinkedList'
 }
-
-{ #category : 'testing' }
-MyLinkedList >> isEmpty [
-	^ first isEmpty.
-	
-]
