@@ -1,6 +1,6 @@
 Class {
 	#name : 'FullNode',
-	#superclass : 'MyNode',
+	#superclass : 'Object',
 	#category : 'MyLinkedList',
 	#package : 'MyLinkedList'
 }
