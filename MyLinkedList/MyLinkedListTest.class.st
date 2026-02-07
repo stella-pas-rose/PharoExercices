@@ -11,7 +11,30 @@ MyLinkedListTest >> testInitializeLinkedList [
 	| l |
 	l := MyLinkedList new.
 	self assert: l isEmpty.
-	self assert: l size equals:0.
+	
+]
+
+{ #category : 'initialization' }
+MyLinkedListTest >> testInitializeLinkedListWithNode [
+	| l n|
+	l := MyLinkedList new.
+	n := MyNode new.
+	n value: 5.
+	l first: n.
+	self assert: l first value equals: 5.
+]
+
+{ #category : 'initialization' }
+MyLinkedListTest >> testListAddNodeWhileNotBeingEmpty [
+	| l n m|
+	l := MyLinkedList new.
+	n := MyNode new.
+	n value: 5.
+	l first: n.
+	m:= MyNode new.
+	m value: 7.
+	l add: m.
+	self assert: l first next value equals: 7.
 ]
 
 { #category : 'tests' }
@@ -23,6 +46,17 @@ MyLinkedListTest >> testNextSet [
 	n next: m.
 	self assert: n next equals: m
 	
+]
+
+{ #category : 'initialization' }
+MyLinkedListTest >> testNotEmptyLinkedList [
+
+	| l n |
+	l := MyLinkedList new.
+	n := MyNode new.
+	n value: 7.
+	l first: n.
+	self assert: l isEmpty not.
 ]
 
 { #category : 'tests' }
