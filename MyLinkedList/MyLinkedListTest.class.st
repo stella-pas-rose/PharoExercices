@@ -59,6 +59,19 @@ MyLinkedListTest >> testNotEmptyLinkedList [
 	self assert: l isEmpty not.
 ]
 
+{ #category : 'initialization' }
+MyLinkedListTest >> testSizeOfList [
+	| l n m|
+	l := MyLinkedList new.
+	n := MyNode new.
+	self assert: l size equals: 0.
+	l first: n.
+	self assert: l size equals: 1.
+	m:= MyNode new.
+	l add: m.
+	self assert: l size equals: 2.
+]
+
 { #category : 'tests' }
 MyLinkedListTest >> testValueSet [ 
 	| n |

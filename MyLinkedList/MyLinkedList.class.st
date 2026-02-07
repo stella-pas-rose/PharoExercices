@@ -45,3 +45,12 @@ MyLinkedList >> isEmpty [
 	^ n ifNil:[true] ifNotNil:[false].
 	
 ]
+
+{ #category : 'accessing' }
+MyLinkedList >> size [
+	|c n|
+	c := 0.
+	n := first.
+	[n] whileNotNil: [ c := c+1. n := n next. ].
+	^c
+]
