@@ -20,3 +20,13 @@ MyJavaDocGen >> class: aClass [
 	stream nextPutAll: '</body></html>'.
 	^ stream contents.
 ]
+
+{ #category : 'accessing' }
+MyJavaDocGen >> doc: aClass [
+	"create the html file: 'doc.html'"
+	| content file|
+	content := self class: aClass.
+	file := 'doc.html' asFileReference.
+	file writeStream nextPutAll: content; close.
+	^file.
+]
