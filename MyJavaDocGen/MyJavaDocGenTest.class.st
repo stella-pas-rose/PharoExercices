@@ -6,6 +6,24 @@ Class {
 }
 
 { #category : 'tests' }
+MyJavaDocGenTest >> testJavaDocMainCommentIsSet [
+
+	|doc comm|.
+	doc := MyJavaDocGen new.
+	comm := doc class: MyLinkedList .
+	self assert: (comm includesSubstring: 'Node').
+]
+
+{ #category : 'tests' }
+MyJavaDocGenTest >> testJavaDocMethodsIsSet [
+
+	|doc method|.
+	doc := MyJavaDocGen new.
+	method := doc class: MyLinkedList .
+	self assert: (method includesSubstring: 'add').
+]
+
+{ #category : 'tests' }
 MyJavaDocGenTest >> testJavaDocTitleIsSet [
 
 	|doc title|.

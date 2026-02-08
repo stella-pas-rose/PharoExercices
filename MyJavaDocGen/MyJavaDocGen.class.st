@@ -7,5 +7,9 @@ Class {
 
 { #category : 'accessing' }
 MyJavaDocGen >> class: aClass [
-	^ '<html><body><p>', aClass name, '</p></body></html>'
+	"create a html documentation for the class"
+	^ '<html><body><h2>', aClass name, '</h2>',
+		aClass comment, '</body></html>',
+		[ aClass methods ] do: [ :m | '<h3>',m, '</h3><p>', m comment, '</p>'],
+		'</body></html>'
 ]
