@@ -21,6 +21,7 @@ MyJavaDocGenTest >> testJavaDocMethodsIsSet [
 	doc := MyJavaDocGen new.
 	method := doc class: MyLinkedList .
 	self assert: (method includesSubstring: 'add').
+	self assert: (method includesSubstring: 'update the first node of the list')
 ]
 
 { #category : 'tests' }
