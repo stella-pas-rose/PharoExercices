@@ -28,7 +28,7 @@ le nom de `doc.html`.
     de la classe passée en paramètre.
 
 <h3>Comment créer doc.html?</h3>
-Afin de créer `doc.html`, il suffit d'éxécute le code suivant dans le PlayGround:
+Afin de créer `doc.html`, il suffit d'exécute le code suivant dans le PlayGround:
 
   ```
   MyJavaDocGen new doc: MyLinkedList.
